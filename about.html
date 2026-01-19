@@ -1,15 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>About Us | Scentiv</title>
+  <meta charset="UTF-8">
+  <title>Scentiv | About Us</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
-  <h1>About Scentiv</h1>
+<!-- HEADER -->
+<header class="header">
+  <div class="logo">
+    <img src="image/logo.jpg" alt="Scentiv Logo">
+  </div>
+
+  <div class="header-text">
+    <h1>Scentiv</h1>
+    <p>Crafting Calm Through Fragrance</p>
+  </div>
 </header>
 
+<!-- NAV -->
 <nav>
   <a href="index.html">Home</a>
   <a href="about.html">About</a>
@@ -17,16 +29,115 @@
   <a href="contact.html">Contact</a>
 </nav>
 
-<section class="box">
-  <p>
-    Scentiv is a premium scented candle brand focused on quality,
-    elegance, and soothing fragrances. Each candle is crafted to
-    enhance your mood and create a calming atmosphere.
+<!-- ABOUT SECTION -->
+<section class="about">
+  <h2>About Scentiv</h2>
+
+  <p class="about-text">
+    Scentiv is a premium candle brand dedicated to creating elegant,
+    handcrafted scented candles that bring peace, warmth, and balance
+    into everyday life. Each candle is thoughtfully designed using
+    high-quality natural wax and refined fragrance oils to ensure
+    a clean burn and long-lasting aroma.
+  </p>
+
+  <p class="about-text">
+    Our candles are perfect for relaxation, meditation, home décor,
+    gifting, and special moments. We believe fragrance has the power
+    to transform spaces and uplift moods.
   </p>
 </section>
 
+<!-- CANDLE DETAILS -->
+<section class="candle-details">
+  <h2>Candle Size & Burn Time</h2>
+
+  <div class="details-grid">
+
+    <div class="detail-card">
+      <h3>Small</h3>
+      <p><strong>Weight:</strong> 120g</p>
+      <p><strong>Burn Time:</strong> 18–22 hours</p>
+      <p><strong>Best For:</strong> Small rooms, gifting</p>
+    </div>
+
+    <div class="detail-card">
+      <h3>Medium</h3>
+      <p><strong>Weight:</strong> 220g</p>
+      <p><strong>Burn Time:</strong> 35–40 hours</p>
+      <p><strong>Best For:</strong> Bedrooms, living spaces</p>
+    </div>
+
+    <div class="detail-card">
+      <h3>Large</h3>
+      <p><strong>Weight:</strong> 350g</p>
+      <p><strong>Burn Time:</strong> 55–65 hours</p>
+      <p><strong>Best For:</strong> Large rooms, premium gifting</p>
+    </div>
+
+  </div>
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq-item">
+    <h4>How long should I burn my candle?</h4>
+    <p>For best results, burn your candle for 2–4 hours at a time to allow an even wax pool.</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>Why is my candle tunneling?</h4>
+    <p>Tunneling happens when the candle is not burned long enough. Always let the wax melt to the edges.</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>Are Scentiv candles safe?</h4>
+    <p>Yes. Our candles are made using natural wax, cotton wicks, and premium fragrance oils.</p>
+  </div>
+</section>
+🔹 CANDLE CARE & SAFETY TIPS
+html
+Copy code
+<section class="candle-care">
+  <h2>Candle Care & Safety Tips</h2>
+
+  <ul>
+    <li>Trim the wick to 5mm before each burn</li>
+    <li>Never burn a candle for more than 4 hours</li>
+    <li>Keep candles away from children and pets</li>
+    <li>Always place on a heat-resistant surface</li>
+    <li>Do not leave a burning candle unattended</li>
+    <li>Stop using when 1cm wax remains</li>
+  </ul>
+</section>
+<section class="contact-form" id="contact">
+  <h2>Contact Us</h2>
+
+  <form onsubmit="sendWhatsApp(); return false;">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="text" id="phone" placeholder="Your Phone Number" required>
+    <textarea id="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send via WhatsApp</button>
+  </form>
+</section>
+
+<script>
+function sendWhatsApp() {
+  var name = document.getElementById("name").value;
+  var phone = document.getElementById("phone").value;
+  var message = document.getElementById("message").value;
+
+  var url = "https://wa.me/916204559272?text="
+    + "Name: " + name + "%0a"
+    + "Phone: " + phone + "%0a"
+    + "Message: " + message;
+
+  window.open(url, "_blank");
+}
+</script>
+
+
+<!-- FOOTER -->
 <footer>
-  <p>© 2026 Scentiv</p>
+  <p>© 2026 Scentiv. All Rights Reserved.</p>
 </footer>
 
 </body>
